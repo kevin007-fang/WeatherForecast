@@ -20,15 +20,13 @@ PODS:
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
-  - YTKNetwork (2.0.4):
-    - AFNetworking (~> 3.0)
 
 DEPENDENCIES:
+  - AFNetworking
   - BaiduMapKit
   - Masonry
   - MJExtension
   - SDWebImage
-  - YTKNetwork
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -37,7 +35,6 @@ SPEC REPOS:
     - Masonry
     - MJExtension
     - SDWebImage
-    - YTKNetwork
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -45,8 +42,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
-  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: a4eef9b9898619e747fde7c002f5cb67fc713f96
+PODFILE CHECKSUM: c2d3ff175f7c916b9025bf955cd571d761edfb2a
 
 COCOAPODS: 1.6.1

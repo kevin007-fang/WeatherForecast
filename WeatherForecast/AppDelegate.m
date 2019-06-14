@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
 #import "HomeViewController.h"
 
 @interface AppDelegate ()
@@ -24,9 +24,37 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:homeVC];
     self.window.rootViewController = nav;
     
-    [self.window makeKeyWindow];
+    [self configMap];
     
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [self.window makeKeyWindow];
     return YES;
+}
+
+- (void)configMap {
+    // 要使用百度地图，请先启动BaiduMapManager
+    BMKMapManager *mapManager = [[BMKMapManager alloc] init];
+    // 如果要关注网络及授权验证事件，请设定generalDelegate参数
+    BOOL ret = [mapManager start:@"1HVmz6p7E0xEfG4z4PHcGhLqGOAG7Mm2"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+    /**
+     全局设置地图SDK与开发者交互时的坐标类型。不调用此方法时，
+     
+     设置此坐标类型意味着2个方面的约定：
+     1. 地图SDK认为开发者传入的所有坐标均为此类型；
+     2. 所有地图SDK返回给开发者的坐标均为此类型；
+     
+     地图SDK默认使用BD09LL（BMK_COORDTYPE_BD09LL）坐标。
+     如需使用GCJ02坐标，传入参数值为BMK_COORDTYPE_COMMON即可。ß
+     本方法不支持传入WGS84（BMK_COORDTYPE_GPS）坐标。
+     
+     @param coorType 地图SDK全局使用的坐标类型
+     @return 设置成功返回YES，设置失败返回False
+     */
+    //设置为GCJ02坐标
+    [BMKMapManager setCoordinateTypeUsedInBaiduMapSDK: BMK_COORDTYPE_COMMON];
 }
 
 

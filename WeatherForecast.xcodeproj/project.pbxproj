@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		324C7A6F22B36C88007DA46D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C7A6E22B36C88007DA46D /* HomeViewController.m */; };
 		324C7A7222B36CC3007DA46D /* CityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C7A7122B36CC3007DA46D /* CityDetailViewController.m */; };
+		324C7A7622B36E0F007DA46D /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C7A7522B36E0F007DA46D /* City.m */; };
+		324C7A7A22B36F52007DA46D /* CityListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C7A7922B36F52007DA46D /* CityListViewModel.m */; };
+		324C7A8A22B38061007DA46D /* BaseHTTPSessionManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C7A8922B38061007DA46D /* BaseHTTPSessionManger.m */; };
+		324C7A8D22B38248007DA46D /* CityDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C7A8C22B38248007DA46D /* CityDetailViewModel.m */; };
+		324C7A9022B38B3E007DA46D /* Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C7A8F22B38B3E007DA46D /* Properties.m */; };
+		324C7A9322B38F94007DA46D /* Period.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C7A9222B38F94007DA46D /* Period.m */; };
 		32E4E08C22B36A4B0058ADB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E4E08B22B36A4B0058ADB5 /* AppDelegate.m */; };
 		32E4E08F22B36A4B0058ADB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E4E08E22B36A4B0058ADB5 /* ViewController.m */; };
 		32E4E09222B36A4B0058ADB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32E4E09022B36A4B0058ADB5 /* Main.storyboard */; };
@@ -44,6 +50,18 @@
 		324C7A6E22B36C88007DA46D /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		324C7A7022B36CC3007DA46D /* CityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityDetailViewController.h; sourceTree = "<group>"; };
 		324C7A7122B36CC3007DA46D /* CityDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityDetailViewController.m; sourceTree = "<group>"; };
+		324C7A7422B36E0F007DA46D /* City.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		324C7A7522B36E0F007DA46D /* City.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		324C7A7822B36F52007DA46D /* CityListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityListViewModel.h; sourceTree = "<group>"; };
+		324C7A7922B36F52007DA46D /* CityListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityListViewModel.m; sourceTree = "<group>"; };
+		324C7A8822B38061007DA46D /* BaseHTTPSessionManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHTTPSessionManger.h; sourceTree = "<group>"; };
+		324C7A8922B38061007DA46D /* BaseHTTPSessionManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHTTPSessionManger.m; sourceTree = "<group>"; };
+		324C7A8B22B38248007DA46D /* CityDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityDetailViewModel.h; sourceTree = "<group>"; };
+		324C7A8C22B38248007DA46D /* CityDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityDetailViewModel.m; sourceTree = "<group>"; };
+		324C7A8E22B38B3E007DA46D /* Properties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Properties.h; sourceTree = "<group>"; };
+		324C7A8F22B38B3E007DA46D /* Properties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Properties.m; sourceTree = "<group>"; };
+		324C7A9122B38F94007DA46D /* Period.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Period.h; sourceTree = "<group>"; };
+		324C7A9222B38F94007DA46D /* Period.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Period.m; sourceTree = "<group>"; };
 		32E4E08722B36A4B0058ADB5 /* WeatherForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E4E08A22B36A4B0058ADB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32E4E08B22B36A4B0058ADB5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +108,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		324C7A7322B36E04007DA46D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				324C7A7422B36E0F007DA46D /* City.h */,
+				324C7A7522B36E0F007DA46D /* City.m */,
+				324C7A8E22B38B3E007DA46D /* Properties.h */,
+				324C7A8F22B38B3E007DA46D /* Properties.m */,
+				324C7A9122B38F94007DA46D /* Period.h */,
+				324C7A9222B38F94007DA46D /* Period.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		324C7A7722B36F31007DA46D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				324C7A7822B36F52007DA46D /* CityListViewModel.h */,
+				324C7A7922B36F52007DA46D /* CityListViewModel.m */,
+				324C7A8B22B38248007DA46D /* CityDetailViewModel.h */,
+				324C7A8C22B38248007DA46D /* CityDetailViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		324C7A7B22B3737D007DA46D /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				324C7A8822B38061007DA46D /* BaseHTTPSessionManger.h */,
+				324C7A8922B38061007DA46D /* BaseHTTPSessionManger.m */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		32E4E07E22B36A4B0058ADB5 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +166,9 @@
 		32E4E08922B36A4B0058ADB5 /* WeatherForecast */ = {
 			isa = PBXGroup;
 			children = (
+				324C7A7B22B3737D007DA46D /* Api */,
+				324C7A7722B36F31007DA46D /* ViewModel */,
+				324C7A7322B36E04007DA46D /* Model */,
 				32E4E08A22B36A4B0058ADB5 /* AppDelegate.h */,
 				32E4E08B22B36A4B0058ADB5 /* AppDelegate.m */,
 				324C7A6D22B36C88007DA46D /* HomeViewController.h */,
@@ -348,9 +402,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				32E4E08F22B36A4B0058ADB5 /* ViewController.m in Sources */,
+				324C7A8D22B38248007DA46D /* CityDetailViewModel.m in Sources */,
+				324C7A8A22B38061007DA46D /* BaseHTTPSessionManger.m in Sources */,
 				32E4E09A22B36A4C0058ADB5 /* main.m in Sources */,
+				324C7A7622B36E0F007DA46D /* City.m in Sources */,
+				324C7A7A22B36F52007DA46D /* CityListViewModel.m in Sources */,
 				32E4E08C22B36A4B0058ADB5 /* AppDelegate.m in Sources */,
+				324C7A9322B38F94007DA46D /* Period.m in Sources */,
 				324C7A7222B36CC3007DA46D /* CityDetailViewController.m in Sources */,
+				324C7A9022B38B3E007DA46D /* Properties.m in Sources */,
 				324C7A6F22B36C88007DA46D /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,13 +588,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/fang/Desktop/WeatherForecast/WeatherForecast/WeatherForecast.pch;
 				INFOPLIST_FILE = WeatherForecast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = noerden.WeatherForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -548,13 +609,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/fang/Desktop/WeatherForecast/WeatherForecast/WeatherForecast.pch;
 				INFOPLIST_FILE = WeatherForecast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = noerden.WeatherForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
