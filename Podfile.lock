@@ -1,0 +1,52 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - BaiduMapKit (4.3.0)
+  - Masonry (1.1.0)
+  - MJExtension (3.0.16)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
+  - YTKNetwork (2.0.4):
+    - AFNetworking (~> 3.0)
+
+DEPENDENCIES:
+  - BaiduMapKit
+  - Masonry
+  - MJExtension
+  - SDWebImage
+  - YTKNetwork
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - BaiduMapKit
+    - Masonry
+    - MJExtension
+    - SDWebImage
+    - YTKNetwork
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BaiduMapKit: 63575d9236b4112c4ff76391df637f2a6dc1ada8
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
+
+PODFILE CHECKSUM: a4eef9b9898619e747fde7c002f5cb67fc713f96
+
+COCOAPODS: 1.6.1

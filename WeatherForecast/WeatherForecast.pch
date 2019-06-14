@@ -1,0 +1,19 @@
+//
+//  WeatherForecast.pch
+//  WeatherForecast
+//
+//  Created by Fang on 2019/6/14.
+//  Copyright © 2019 Fang. All rights reserved.
+//
+
+#ifndef WeatherForecast_pch
+#define WeatherForecast_pch
+
+#import <YTKNetwork.h>
+#import <Masonry.h>
+#import <MJExtension.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* WeatherForecast_pch */
