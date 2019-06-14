@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CityListViewModel : NSObject
 
+///city list
 @property (nonatomic, strong) NSArray *cityListArr;
 @end
 

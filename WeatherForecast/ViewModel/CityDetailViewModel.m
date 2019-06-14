@@ -15,6 +15,7 @@
 
 @implementation CityDetailViewModel
 
+#pragma mark - Query city info
 - (void)doQueryDataWithPoint:(NSString *)point completion:(nullable void (^)(City *city, NSError *error))completionHandle {
     [[BaseHTTPSessionManger shareInstance] GET:[NSString stringWithFormat:@"points/%@", point] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         City *city = [City mj_objectWithKeyValues:responseObject];
@@ -26,6 +27,7 @@
     }];
 }
 
+#pragma mark - Query weather info
 - (void)doQueryWeatherDataWithURL:(NSString *)URL completion:(nullable void (^)(City *city, NSError *error))completionHandle {
     NSString *tempURL = URL;
     tempURL = [tempURL stringByReplacingOccurrencesOfString:@"https://api.weather.gov/" withString:@""];

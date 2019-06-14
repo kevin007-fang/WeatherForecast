@@ -13,8 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CityDetailViewModel : NSObject
 
+///Query city info
 - (void)doQueryDataWithPoint:(NSString *)point completion:(nullable void (^)(City *city, NSError *error))completionHandle;
 
+///Query weather info
 - (void)doQueryWeatherDataWithURL:(NSString *)URL completion:(nullable void (^)(City *city, NSError *error))completionHandle;
 @end
 
