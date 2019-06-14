@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CityDetailViewController : UIViewController
 
+///city info
 @property (nonatomic, strong) City *city;
 @end
 

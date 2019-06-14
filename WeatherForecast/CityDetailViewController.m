@@ -15,12 +15,19 @@
 
 @interface CityDetailViewController ()<BMKMapViewDelegate>
 
+///weather thumbnail
 @property (nonatomic, strong) UIImageView *weatherThumbImgView;
+
+///city name
 @property (nonatomic, strong) UILabel *cityNameLab;
+
+///weather desc
 @property (nonatomic, strong) UILabel *descLab;
 
+///baidu map
 @property (nonatomic, strong) BMKMapView *mapView;
 
+///viewModel
 @property (nonatomic, strong) CityDetailViewModel *cityDetailViewModel;
 @end
 
@@ -37,6 +44,7 @@
     [self doQueryData];
 }
 
+///config UI
 - (void)configUI {
     ///weather thumbnail
     [self.view addSubview:self.weatherThumbImgView];
@@ -74,16 +82,17 @@
     
     BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
     annotation.coordinate = CLLocationCoordinate2DMake(self.city.latitude.doubleValue, self.city.longitude.doubleValue);
-    //设置标注的标题
     annotation.title = @"America";
-    //副标题
     annotation.subtitle = self.city.name;
     [self.mapView addAnnotation:annotation];
 }
 
+#pragma mark - Query city info
 - (void)doQueryData {
     __weak typeof(self) weakSelf = self;
+    [self.view makeToastActivity:CSToastPositionCenter];
     [self.cityDetailViewModel doQueryDataWithPoint:[NSString stringWithFormat:@"%@,%@", self.city.latitude, self.city.longitude] completion:^(City * _Nonnull city, NSError * _Nonnull error) {
+        [weakSelf.view hideToastActivity];
         if (error == nil) {
             weakSelf.cityNameLab.text = city.properties.timeZone;
             
@@ -93,9 +102,12 @@
     }];
 }
 
+#pragma mark - Query weather info
 - (void)doQueryWeatherDataWithURL:(NSString *)URL {
     __weak typeof(self) weakSelf = self;
+    [self.view makeToastActivity:CSToastPositionCenter];
     [self.cityDetailViewModel doQueryWeatherDataWithURL:URL completion:^(City * _Nonnull city, NSError * _Nonnull error) {
+        [weakSelf.view hideToastActivity];
         if (city.properties.periods.count > 0) {
             Period *period = city.properties.periods[0];
             
@@ -105,6 +117,7 @@
     }];
 }
 
+#pragma mark - getter
 - (UIImageView *)weatherThumbImgView {
     if (_weatherThumbImgView == nil) {
         _weatherThumbImgView = [[UIImageView alloc] initWithFrame:CGRectZero];

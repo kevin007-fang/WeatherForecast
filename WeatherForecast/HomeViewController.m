@@ -14,6 +14,8 @@
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+
+///viewModel
 @property (nonatomic, strong) CityListViewModel *cityListViewModel;
 @end
 
@@ -24,8 +26,6 @@
     // Do any additional setup after loading the view.
     
     self.title = @"City List";
-    
-    
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -71,6 +71,7 @@
     }
 }
 
+#pragma mark - getter
 - (UITableView *)tableView {
     if (_tableView == nil) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];

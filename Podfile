@@ -5,5 +5,6 @@ target 'WeatherForecast' do
   pod 'AFNetworking'
   pod 'MJExtension'
   pod 'SDWebImage'
+  pod 'Toast'
 end 
 
